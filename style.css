@@ -67,6 +67,23 @@ section {
   display: none !important;
 }
 
+#more {
+  position: relative;
+}
+
+#email-section {
+  display: block;
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: #22CCDD;
+  transition: 0.3s;
+}
+
+#email-section:hover, #email-section:focus {
+  background-color: #FFFFFF;
+}
+
 footer {
   width: 100%;
   height: 40vh;
