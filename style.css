@@ -22,7 +22,7 @@ section {
 		**/
 }
 
-#center {
+.center {
   display: inline-block;
   position: absolute;
   top: 50%;
@@ -38,6 +38,24 @@ section {
 	border-radius: 3%;
 
 		**/
+}
+
+#about {
+  position: relative;
+}
+
+#photo {
+  width: 200px;
+  height: 200px;
+  display: inline-block;
+  float: right;
+  border-radius: 50%;
+/**
+  border: solid 5px white; *********/
+}
+
+#summary {
+  display: grid;
 }
 
 footer {
