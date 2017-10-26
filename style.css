@@ -11,6 +11,15 @@ section {
 #hero {
   text-align: center;
   position: relative;
+
+		/** testing
+
+	background-image: url('https://static.pexels.com/photos/620337/pexels-photo-620337.jpeg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+
+		**/
 }
 
 #center {
@@ -20,6 +29,15 @@ section {
   left: 50%;
   transform: translate(-50%, -50%);
   padding: 3%;
+
+		/** testing
+
+	background: rgba(0,0,0,0.5);
+	box-shadow: 0px 20px 26px rgba(0,0,0,0.7);
+	color: white;
+	border-radius: 3%;
+
+		**/
 }
 
 footer {
