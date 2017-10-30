@@ -69,10 +69,15 @@ section {
 #portfolio {
   position: relative;
   text-align: center;
+  height: auto;
 }
 
 .hidden {
   display: none !important;
+}
+
+.page {
+  display: inline-block;
 }
 
 #more {
