@@ -103,6 +103,28 @@
   
   </main>
 
+<script>
+
+window.onscroll = function() {scrolla()};
+
+//remembering bottom to top parsing.
+//funny names because why not
+
+function scrolla() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    //document.getElementById("nav").style.top = "-10vh";
+    document.getElementById("nav").style.transform = "rotateX(0deg)";
+  } else {
+    //document.getElementById("nav").style.top = "-20vh";
+    document.getElementById("nav").style.transform = "rotateX(90deg)";
+  }
+}
+
+//will keep the script here for now
+//just testing ideas, could need top anim later
+
+</script>
+
 </body>
 
 </html>
