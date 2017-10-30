@@ -10,6 +10,7 @@ main, #main {
   top: -10vh;
   transform: rotateX(90deg);
   z-index: 1;
+  transition: 0.3s;
 }
 
 section {
