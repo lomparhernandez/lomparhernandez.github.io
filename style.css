@@ -84,6 +84,10 @@ section {
   position: relative;
 }
 
+#more .center {
+  text-align: center;
+}
+
 #email-section {
   display: block;
   height: 100px;
@@ -91,6 +95,7 @@ section {
   border-radius: 50%;
   background-color: #22CCDD;
   transition: 0.3s;
+  margin: auto;
 }
 
 #email-section:hover, #email-section:focus {
