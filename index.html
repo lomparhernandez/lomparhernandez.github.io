@@ -110,6 +110,7 @@
   
   </main>
 
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
 <script>
 
 window.onscroll = function() {scrolla()};
@@ -129,6 +130,24 @@ function scrolla() {
 
 //will keep the script here for now
 //just testing ideas, could need top anim later
+
+//KARL's IAS
+$(document).ready(function(){
+  $('.navlink').click(function() {
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
+    && location.hostname == this.hostname) {
+      var $target = $(this.hash);
+      $target = $target.length && $target
+      || $('[name=' + this.hash.slice(1) +']');
+      if ($target.length) {
+        var targetOffset = $target.offset().top;
+        $('html,body')
+        .animate({scrollTop: targetOffset}, 1000);
+       return false;
+      }
+    }
+  });
+});
 
 </script>
 
