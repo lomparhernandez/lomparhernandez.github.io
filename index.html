@@ -45,7 +45,7 @@
         <h1>Nice to meet you!</h1>
         <h2>My name is Marko</h2>
       </div>
-      <i class="fa fa-angle-down fa-4x" aria-hidden="true"></i>
+      <a class="ad-icon" href="#about"><i class="fa fa-angle-down fa-4x" aria-hidden="true"></i></a>
     </section>
 
     <section id="about">
@@ -144,7 +144,7 @@ function scrolla() {
 
 //KARL's IAS
 $(document).ready(function(){
-  $('.navlink').click(function() {
+  $('.navlink, .ad-icon').click(function() {
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
     && location.hostname == this.hostname) {
       var $target = $(this.hash);
