@@ -1,6 +1,13 @@
+@keyframes floaty-text {
+  0% { text-shadow: 0px 2px 5px rgba(0,0,0,0.8); }
+  50% { text-shadow: 0px 7px 10px rgba(0,0,0,0.8); }
+  100% { text-shadow: 0px 2px 5px rgba(0,0,0,0.8); }
+}
+
 main, #main {
   width: 100%;
   height: auto;
+  font-family: sans-serif;
 }
 
 #nav {
@@ -11,6 +18,7 @@ main, #main {
   transform: rotateX(90deg);
   z-index: 1;
   transition: 0.5s ease-out;
+  background: rgba(0,0,0,0.7);
 }
 
 #nav-container {
@@ -25,6 +33,43 @@ main, #main {
   float: left;
 }
 
+.navlink {
+  height: 100%;
+  display: inline-block;
+  transform: translateY(175%);
+  transition: 0.5s;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.navlink:hover, .navlink:focus {
+  background: rgba(255,255,255,1);
+  color: black;
+}
+
+#navigation-social {
+  display: inline-block;
+  float: right;
+  color: white;
+  margin-right: 1rem;
+}
+
+#navigation-social i {
+  height: 100%;
+  display: inline-block;
+  transform: translateY(75%);
+  transition: 0.5s;
+  color: white;
+  text-decoration: none;
+  padding: 0px 0.1rem;
+}
+
+#navigation-social i:hover, #navigation-social i:focus {
+  background: white;
+  color: black;
+}
+
 section {
   width: 100%;
   height: 100vh;
@@ -34,14 +79,27 @@ section {
   text-align: center;
   position: relative;
 
-		/** testing
 
 	background-image: url('https://static.pexels.com/photos/620337/pexels-photo-620337.jpeg');
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
 
-		**/
+}
+
+#hero i {
+  display: block;
+  height: auto;
+  width: 100%;
+  position: absolute;
+  bottom: 0px;
+  color: white;
+  text-align: center;
+  text-shadow: 0px 2px 5px rgba(0,0,0,0.8);
+}
+
+#hero i:hover, #hero i:focus {
+  animation: floaty-text 1.3s infinite;
 }
 
 .center {
@@ -52,18 +110,22 @@ section {
   transform: translate(-50%, -50%);
   padding: 3%;
 
-		/** testing
 
 	background: rgba(0,0,0,0.5);
 	box-shadow: 0px 20px 26px rgba(0,0,0,0.7);
 	color: white;
 	border-radius: 3%;
 
-		**/
 }
 
 #about {
   position: relative;
+  
+	background-image: url('https://static.pexels.com/photos/615060/pexels-photo-615060.jpeg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+
 }
 
 #photo {
@@ -72,8 +134,7 @@ section {
   display: inline-block;
   float: right;
   border-radius: 50%;
-/**
-  border: solid 5px white; *********/
+  border: solid 5px white; 
 }
 
 #summary {
@@ -83,7 +144,18 @@ section {
 #portfolio {
   position: relative;
   text-align: center;
-  height: auto;
+  height: 100vh;
+
+	background-image: url('https://images.pexels.com/photos/572938/pexels-photo-572938.jpeg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+
+}
+
+.fixed-card-a {
+  width: 70%;
+  height: 70%;
 }
 
 .hidden {
@@ -92,10 +164,60 @@ section {
 
 .page {
   display: inline-block;
+  position: relative;
+  width: 45%;
+  height: 50%;
+  overflow: hidden;
+}
+
+.page h4 {
+  margin: 0px;
+}
+
+.page-picture {
+  height: 75%;
+  width: 100%;
+}
+
+.prev {
+  width: 100%;
+  height: 85%;
+  position: absolute;
+  top: 0;
+  background: rgba(0,0,0,0.7);
+  opacity: 0;
+  transition: 0.7s;
+}
+
+.prev:hover, .prev:focus {
+  opacity: 1;
+}
+
+.prev a {
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: 0.4s;
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+
+}
+
+.prev a:hover, .prev a:focus {
+  text-decoration: underline;
 }
 
 #more {
   position: relative;
+
+	background-image: url('https://images.pexels.com/photos/240225/pexels-photo-240225.jpeg');
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+
 }
 
 #more .center {
@@ -110,6 +232,17 @@ section {
   background-color: #22CCDD;
   transition: 0.3s;
   margin: auto;
+  color: white;
+}
+
+#email-section:hover, #email-section:focus {
+  color: #22CCDD;
+  background: white;
+  transform: rotateZ(360deg);
+}
+
+#email-section i {
+  padding: 14px;
 }
 
 #email-section:hover, #email-section:focus {
@@ -119,4 +252,28 @@ section {
 footer {
   width: 100%;
   height: 40vh;
+  background: linear-gradient(black 50%, gray 400%);
+}
+
+@media only screen and (max-width: 720px) {
+
+  #photo {
+    display: block;
+    float: none;
+  }
+
+  #portfolio {
+    height: 125vh;
+  }
+
+  .page {
+    display: block;
+    width: 100%;
+    height: 25%;
+    }
+
+  .fixed-card-a {
+    height: 85%;
+  }
+
 }
