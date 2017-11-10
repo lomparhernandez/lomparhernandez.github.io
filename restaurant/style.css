@@ -1,0 +1,74 @@
+#main {
+	width: 100%;
+	height: auto;
+}
+
+header {
+	width: 100%;
+	height: 90vh;
+}
+
+section {
+	width: 100%;
+	height: 70vh;
+}
+
+.left-a {
+	display: inline-block;
+	width: 65%;
+	height: 100%;
+	float: left;
+	background: #EEEEEE;
+}
+
+.right-a {
+	display: inline-block;
+	width: 35%;
+	height: 100%;
+	float: right;
+	background: #333333;
+}
+
+.left-b {
+	display: inline-block;
+	width: 35%;
+	height: 100%;
+	float: left;
+	background: #333333;
+}
+
+.right-b {
+	display: inline-block;
+	width: 65%;
+	height: 100%;
+	float: right;
+	background: #EEEEEE;
+}
+
+footer {
+	width: 100%;
+	height: 40vh;
+}
+
+#locs {
+	display: inline-block;
+	height: 75%;
+	width: 50%;
+	float: left;
+	background: #111111;
+}
+
+#hours {
+	display: inline-block;
+	height: 75%;
+	width: 50%;
+	float: right;
+	background: #111111;
+}
+
+#annot {
+	display: inline-block;
+	width: 100%;
+	height: 25%;
+	background: #000000;
+}
