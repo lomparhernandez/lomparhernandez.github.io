@@ -135,6 +135,8 @@ section {
   float: right;
   border-radius: 50%;
   border: solid 5px white; 
+  background: url("./img/escanear0001.jpg");
+  background-size: cover;
 }
 
 #summary {
