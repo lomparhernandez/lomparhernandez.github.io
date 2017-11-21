@@ -1,13 +1,14 @@
 #topnav {
 	position: fixed;
 	width: 100%; 
-	height: 5vh;
+	height: 10vh;
 	overflow: hidden;
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-around;
 	align-items: center;
 	color: #FFFFFF;
+	transition: 0.9s;
 }
 
 #logo {
