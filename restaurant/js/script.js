@@ -9,6 +9,7 @@ function scrolla() {
   } else {
 		document.getElementById("topnav").style.background = "rgba(0, 0, 0, 0)";
 		document.getElementById("topnav").style.height = "10vh";
+		document.getElementById("topnav").style.textShadow = "1px 2px 2px #212121";
   }
 }
 
