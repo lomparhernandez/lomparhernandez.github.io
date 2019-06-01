@@ -7,6 +7,7 @@ body {
 
 section p {
 	color: #888888;
+	width: 90%;
 }
 
 #topnav {
@@ -22,7 +23,7 @@ section p {
 	transition: 0.9s;
 	
 	/*workaround for the google maps iframe taking the topmost z-index*/
-	z-index: 1 !important;
+	z-index: 3 !important;
 }
 
 #logo {
@@ -79,17 +80,35 @@ h2 span {
 header {
 	width: 100%;
 	height: 90vh;
+	position: relative;
 	display: flex !important;
 	flex-flow: row nowrap;
 	justify-content: center;
 	align-content: center;
 	align-items: center;
-	background: #999999;
+	background-image: url("https://cdn.pixabay.com/photo/2018/08/03/14/17/mexican-food-3582000_960_720.jpg");
+	background-size: cover
+}
+
+header: after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(127, 127, 127, 0.1);
 }
 
 #hero {
 	text-align: center;
 	color: #FFFFFF;
+	z-index: 2;
+}
+
+#hero h1 {
+	text-shadow: 1px 2px 2px #212121;
+	text-decoration: underline #FFC884;
 }
 
 section {
@@ -143,6 +162,31 @@ section {
 	justify-content: center;
 	align-content: center;
 	align-items: center;
+}
+
+.left-a, .right-a, .left-b, .right-b {
+	position: relative;
+}
+
+#discover .right-a {
+	background-image: url("https://cdn.pixabay.com/photo/2014/09/18/10/40/chef-450675_960_720.jpg");
+	background-size: cover;
+}
+
+#menu .left-b {
+	background-image: url("https://cdn.pixabay.com/photo/2014/09/18/10/38/chef-450669_960_720.jpg");
+	background-position: right;
+	background-size: cover;
+}
+
+#events .right-a {
+	background-image: url("https://cdn.pixabay.com/photo/2018/03/06/06/58/performance-3202707_960_720.jpg");
+	background-size: cover;
+}
+
+#visit .left-b {
+	background-image: url("https://cdn.pixabay.com/photo/2016/11/21/16/02/bar-1846137_960_720.jpg");
+	background-size: cover;
 }
 
 footer {
