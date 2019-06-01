@@ -148,19 +148,26 @@ footer {
 }
 
 #locs {
-	display: inline-block;
+	display: flex;
 	height: 75%;
 	width: 50%;
 	float: left;
 	background: #111111;
+	flex-flow: row nowrap;
+	justify-content: center;
+	align-items: center;
 }
 
 #hours {
-	display: inline-block;
+	display: flex !important;
 	height: 75%;
 	width: 50%;
 	float: right;
 	background: #111111;
+	flex-flow: column nowrap;
+	justify-content: center;
+	align-content: center;
+	align-items: center;
 }
 
 #annot {
@@ -195,6 +202,11 @@ footer {
 	
 	section {
 		height: auto;
+	}
+	
+	#annot {
+		height: auto;
+		flex-flow: column nowrap;
 	}
 
 }
