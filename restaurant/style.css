@@ -20,6 +20,9 @@ section p {
 	align-items: center;
 	color: #FFFFFF;
 	transition: 0.9s;
+	
+	/*workaround for the google maps iframe taking the topmost z-index*/
+	z-index: 1 !important;
 }
 
 #logo {
