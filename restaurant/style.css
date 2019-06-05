@@ -243,11 +243,11 @@ section {
 	transition: 0.5s;
 }
 
-.right-a:hover::after {
+.right-a:hover::after, .right-a:focus::after, .right-a:active::after {
 	background: rgba(0, 0, 0, 0) !important;
 }
 
-.left-b:hover::after {
+.left-b:hover::after, .left-b:focus::after, .left-b:active::after {
 	background: rgba(0, 0, 0, 0) !important;
 }
 
