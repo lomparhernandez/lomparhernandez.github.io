@@ -21,6 +21,7 @@ section p {
 	align-items: center;
 	color: #FFFFFF;
 	transition: 0.9s;
+	text-shadow: 1px 2px 2px #212121;
 	
 	/*workaround for the google maps iframe taking the topmost z-index*/
 	z-index: 3 !important;
