@@ -3,7 +3,7 @@ window.onscroll = function() {scrolla()};
 //recycling my old scrolla func
 
 function scrolla() {
-	if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+	if (document.body.scrollTop > document.getElementsByTagName("header")[0].offsetHeight || document.documentElement.scrollTop > document.getElementsByTagName("header")[0].offsetHeight) {
 		document.getElementById("topnav").style.background = "rgba(0, 0, 0, 0.7)";
 		document.getElementById("topnav").style.height = "7vh";
   } else {
