@@ -15,7 +15,7 @@ function scrolla() {
 
 $(document).ready(function(){
   
-  $('.dis, .men, .eve, .vis').click(function() {
+  $('a').click(function() {
     
     if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
     && location.hostname == this.hostname) {
