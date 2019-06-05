@@ -6,6 +6,7 @@ function scrolla() {
 	if (document.body.scrollTop > document.getElementsByTagName("header")[0].offsetHeight || document.documentElement.scrollTop > document.getElementsByTagName("header")[0].offsetHeight) {
 		document.getElementById("topnav").style.background = "rgba(0, 0, 0, 0.7)";
 		document.getElementById("topnav").style.height = "7vh";
+		document.getElementById("topnav").style.textShadow = "0px 0px #000000";
   } else {
 		document.getElementById("topnav").style.background = "rgba(0, 0, 0, 0)";
 		document.getElementById("topnav").style.height = "10vh";
