@@ -23,7 +23,11 @@
 </head>
 
 <body>
+	
   <div id="app"></div>
+	
+  <div id="map-container" style="height: 80vh; width: 100vw"></div>
+	
   <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js" crossorigin></script>
   <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
@@ -32,6 +36,15 @@
   <!--- so in this case i will create an app component with a nested greeter --->
   
   <script type="text/babel">
+  
+    const renderedMap = L.map('map-container').setView([51.505, -0.09], 13);
+    const osmAttribution = '&copy; <a href="https://www.openstreetmap.org/copyright" target="_blank">OpenStreetMap</a> contributors';
+    const mapApiUrl = "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png";
+    const mapImages = L.tileLayer(mapApiUrl, { osmAttribution });
+    
+    mapImages.addTo(renderedMap);
+    
+    L.marker([51.505, -0.09]).addTo(renderedMap);
 	  
     class Hello extends React.Component {
 		
@@ -50,7 +63,9 @@
     const documentRoot = document.getElementById('app');
     const reactRoot = ReactDOM.createRoot(documentRoot);
     reactRoot.render(
-      <Hello />
+      <div>
+        <Hello />
+      </div>
     );
 
   </script>
