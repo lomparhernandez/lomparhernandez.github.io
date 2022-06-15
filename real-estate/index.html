@@ -51,7 +51,31 @@
     mapImages.addTo(renderedMap);
     
     L.marker([51.505, -0.09]).addTo(renderedMap);
-	  
+    
+    ////////////
+    
+    const defaultState = {name: 'Guest'};
+    const reducer(state = defaultState, action) {
+		switch(action.type) {
+			case 'RENAME'
+				state = {...state, name: action.value}
+				return state;
+				break;
+			default
+				return state;
+				break;
+		}
+	}
+    const store = Redux.createStore(reducer);
+    const nameAction = (newName) => {return({type: 'RENAME', value: newName});};
+    //store.dispatch(nameAction('Oscar'));
+    
+    ////////////
+    
+    
+    
+    ////////////
+    
     class Hello extends React.Component {
 		
       constructor(props) {
