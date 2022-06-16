@@ -72,6 +72,36 @@
     
     ////////////
     
+    const Provider = ReactRedux.Provider;
+    
+    const mapStateToProps = (state) => {
+		return({
+			name: state.name
+		});
+	};
+    
+    const mapDispatchToProps = (disp) => {
+		return({
+			rename: (name) => {
+				disp(nameAction(name))
+			}
+		});
+	};
+	
+	const connect = ReactRedux.connect();
+	
+	const ConnectedHello = connect(mapStateToProps)(Hello);
+    
+
+    class Wrapper extends React.Component {
+		render() {
+			return(
+				<Provider store={store}>
+					<ConnectedHello />
+				</Provider>
+			);
+		};
+    }
     
     
     ////////////
@@ -94,7 +124,7 @@
     const reactRoot = ReactDOM.createRoot(documentRoot);
     reactRoot.render(
       <div>
-        <Hello />
+        <Wrapper />
       </div>
     );
 
