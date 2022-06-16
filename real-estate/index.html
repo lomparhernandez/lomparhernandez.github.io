@@ -56,16 +56,16 @@
     
     const defaultState = {name: 'Guest'};
     const reducer(state = defaultState, action) {
-		switch(action.type) {
-			case 'RENAME'
-				state = {...state, name: action.value}
-				return state;
-				break;
-			default
-				return state;
-				break;
-		}
-	}
+      switch(action.type) {
+        case 'RENAME'
+          state = {...state, name: action.value}
+          return state;
+          break;
+        default
+          return state;
+          break;
+      }
+    }
     const store = Redux.createStore(reducer);
     const nameAction = (newName) => {return({type: 'RENAME', value: newName});};
     //store.dispatch(nameAction('Oscar'));
@@ -75,32 +75,31 @@
     const Provider = ReactRedux.Provider;
     
     const mapStateToProps = (state) => {
-		return({
-			name: state.name
-		});
-	};
+      return({
+        name: state.name
+      });
+     };
     
     const mapDispatchToProps = (disp) => {
-		return({
-			rename: (name) => {
-				disp(nameAction(name))
-			}
-		});
-	};
-	
-	const connect = ReactRedux.connect();
-	
-	const ConnectedHello = connect(mapStateToProps)(Hello);
-    
+      return({
+        rename: (name) => {
+          disp(nameAction(name))
+        }
+      });
+    };
 
+    const connect = ReactRedux.connect();
+	
+    const ConnectedHello = connect(mapStateToProps)(Hello);
+    
     class Wrapper extends React.Component {
-		render() {
-			return(
-				<Provider store={store}>
-					<ConnectedHello />
-				</Provider>
-			);
-		};
+      render() {
+        return(
+          <Provider store={store}>
+            <ConnectedHello />
+          </Provider>
+        );
+      };
     }
     
     
@@ -116,7 +115,7 @@
       }
       
       render() {
-        return <p>Hello {this.state.name}</p>;
+        return <p>Hello {this.props.name}</p>;
       }
     }
 
