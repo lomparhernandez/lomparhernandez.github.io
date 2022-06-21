@@ -41,6 +41,7 @@ main, #main {
   color: white;
   text-decoration: none;
   font-weight: bold;
+  margin: auto 0.35em;
 }
 
 .navlink:hover, .navlink:focus {
@@ -78,13 +79,13 @@ section {
 #hero {
   text-align: center;
   position: relative;
-
-
+  background: #A52A2A;
+/*
 	background-image: url('https://static.pexels.com/photos/620337/pexels-photo-620337.jpeg');
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
-
+*/
 }
 
 #hero i {
@@ -130,8 +131,9 @@ section {
 
 #photo {
   width: 200px;
-  height: 200px;
-  display: inline-block;
+  height: 200px;/*
+  display: inline-block;*/
+  display: none;
   float: right;
   border-radius: 50%;
   border: solid 5px white; 
@@ -147,12 +149,12 @@ section {
   position: relative;
   text-align: center;
   height: 100vh;
-
+  background: #2D8956;/*
 	background-image: url('https://images.pexels.com/photos/572938/pexels-photo-572938.jpeg');
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed;
-
+*/
 }
 
 .fixed-card-a {
@@ -179,6 +181,10 @@ section {
 .page-picture {
   height: 75%;
   width: 100%;
+}
+
+a img {
+  border: 0;
 }
 
 #restaurant-site {
